@@ -52,9 +52,7 @@ function gradeQuiz(candidateAnswers) {
     passed = "PASSED";
   }
   //TODO 3.2 use this variable to calculate the candidates score.
-  return grade;
-  return correct;
-  return passed;
+  return {grade, correct, passed}
 }
 
 function runProgram() {
