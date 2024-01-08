@@ -52,7 +52,7 @@ function gradeQuiz(candidateAnswers) {
     passed = "PASSED";
   }
   //TODO 3.2 use this variable to calculate the candidates score.
-  return {grade, correct, passed}
+  return grade
 }
 
 function runProgram() {
@@ -60,7 +60,9 @@ function runProgram() {
   // TODO 1.1c: Greet candidate using their name //
   console.log("Hello " + candidateName + "!");
   askQuestion();
-  let { grade, correct, passed } = gradeQuiz(candidateAnswers);
+  let grade = gradeQuiz(candidateAnswers);
+  let correct = grade / 20
+  let passed = grade >= 80 ? "PASSED" : "FAILED"
   console.log(`Overall Grade: ${grade} (${correct} of 5 responses correct)`);
   console.log(`Status: ${passed}`);
 }
